@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Box, Paper } from '@mui/material'
+import { Box, Paper, Dialog, DialogTitle } from '@mui/material'
 import NewTimeCard from './components/NewTimeCard.tsx'
 import FilterData from './components/FilterData.tsx';
 import { DataGrid } from '@mui/x-data-grid'
@@ -27,6 +27,7 @@ function App() {
             <FilterData />
           </div>
           <div style={{ 
+              marginTop: "10px",
               width: "100%",
               height: "400px" 
           }}>
