@@ -1,11 +1,15 @@
-import React from 'react'
+import { useState } from 'react'
 import { Box, Paper } from '@mui/material'
 import NewTimeCard from './components/NewTimeCard.tsx'
 import FilterData from './components/FilterData.tsx';
-import { DataGrid, GridColDef, GridRowsProp } from '@mui/x-data-grid'
+import { DataGrid } from '@mui/x-data-grid'
+import { columns } from './utils/index/gridConfig.ts'
 import './css/style.css'
 
 function App() {
+
+  const [rows, setRows] = useState([])
+
   return (
     <div className="App">
       <Box>  
@@ -21,6 +25,12 @@ function App() {
           <div className='actions'>
             <NewTimeCard />
             <FilterData />
+          </div>
+          <div style={{ 
+              width: "100%",
+              height: "400px" 
+          }}>
+            <DataGrid rows={rows} columns={columns()} />
           </div>
         </Paper>        
       </Box>
