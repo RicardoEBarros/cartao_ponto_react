@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Box, Paper, Dialog, DialogTitle } from '@mui/material'
-import NewTimeCard from './components/NewTimeCard.tsx'
+import TimeCard from './components/TimeCard.tsx'
 import FilterData from './components/FilterData.tsx';
 import { DataGrid } from '@mui/x-data-grid'
 import { columns } from './utils/index/gridConfig.ts'
@@ -23,7 +23,7 @@ function App() {
           }}
         >
           <div className='actions'>
-            <NewTimeCard />
+            <TimeCard />
             <FilterData />
           </div>
           <div style={{ 
