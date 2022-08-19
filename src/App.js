@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { Box, Paper, Dialog, DialogTitle } from '@mui/material'
-import TimeCard from './components/TimeCard.tsx'
-import FilterData from './components/FilterData.tsx';
+import TimeCard from './components/TimeCard'
+import FilterData from './components/FilterData';
 import { DataGrid } from '@mui/x-data-grid'
-import { columns } from './utils/index/gridConfig.ts'
+import { columns } from './utils/index/gridConfig'
 import './css/style.css'
 
 function App() {

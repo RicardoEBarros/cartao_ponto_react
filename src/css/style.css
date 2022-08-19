@@ -9,3 +9,7 @@
     justify-content: space-between;
     align-items: center;
 }
+
+.new-card-entry {
+    margin-right: 10px
+}

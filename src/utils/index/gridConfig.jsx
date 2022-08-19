@@ -1,6 +1,4 @@
-import { GridColDef } from '@mui/x-data-grid'
-
-const columns = (): GridColDef[] => {
+const columns = () => {
     return [
         { field: 'id', headerName: '#', width: 30 },
         { field: 'date_time', headerName: 'Data/Hora', width: 150 },
