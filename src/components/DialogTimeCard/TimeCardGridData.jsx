@@ -1,14 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { DataGrid } from '@mui/x-data-grid'
 import columns from '../../utils/dialog/dialogGridConfig'
 import {
     Box,
     Stack
 } from '@mui/material'
+import { TimeCardDataContext } from '../Context/TimeCardDataContext'
 
 export default function TimeCardGridData() {
 
-    const [rows, setRows] = useState([])
+    const { rows } = useContext(TimeCardDataContext)
 
     return (
         <Box sx={{ width: "100%" }}>
