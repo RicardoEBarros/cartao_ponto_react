@@ -1,19 +1,23 @@
-import React, { useState, createContext } from 'react'
+import React, { useState, createContext, useEffect } from 'react'
 
 export const TimeCardDataContext = createContext({
-    rows: [],
-    setRow: (item) => { },
+    rowsIndex: [],
+    setRowsIndex: (item) => { },
     deleteRow: (item) => { }
 })
 
 const TimeCardDataProvider = ({ children }) => {
 
-    const [rows, setRows] = useState([])
-    const setRow = (newItem) => setRows({ ...rows, newItem })
-    // const deleteRow = (newItem) => setRows({ ...rows, newItem })
+    const [rowsIndex, setRowsIndex] = useState([])
+    // const setRow = (newItem) => setRowsIndex([])
+
+    // useEffect(() => {
+    //     console.log('teste')
+    //     console.log(rows)
+    // }, [rows])
 
     return (
-        <TimeCardDataContext.Provider value={{ rows, setRow }}>
+        <TimeCardDataContext.Provider value={{ rowsIndex, setRowsIndex }}>
             {children}
         </TimeCardDataContext.Provider>
     )
