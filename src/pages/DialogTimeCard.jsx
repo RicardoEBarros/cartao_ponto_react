@@ -9,27 +9,31 @@ import {
 } from '@mui/material'
 import TimeCardInsertionOptions from '../components/DialogTimeCard/TimeCardInsertionOptions'
 import TimeCardGridData from '../components/DialogTimeCard/TimeCardGridData'
+import DialogDataProvider, { DialogDataContext } from '../components/Context/DialogContext'
 
 export default function DialogTimeCard() {
 
     const { openDialog, handleClick } = useContext(TimeCardContext)
 
     return (
-        <Dialog
-            fullWidth={true}
-            maxWidth="sm"
-            open={openDialog}
-            onClose={() => handleClick(false)}
-        >
-            <DialogTitle>Novo Ponto</DialogTitle>
-            <DialogContent>
-                <TimeCardInsertionOptions />
-                <TimeCardGridData />
-            </DialogContent>
-            <DialogActions>
-                <Button variant='contained' color="error" onClick={() => handleClick(false)}>Fechar</Button>
-                <Button variant='contained' color="success">Salvar</Button>
-            </DialogActions>
-        </Dialog>
+        <DialogDataProvider>
+            <Dialog
+                fullWidth={true}
+                maxWidth="sm"
+                open={openDialog}
+                onClose={() => handleClick(false)}
+            >
+                <DialogTitle>Novo Ponto</DialogTitle>
+                <DialogContent>
+                    <TimeCardInsertionOptions />
+                    <TimeCardGridData />
+                </DialogContent>
+                <DialogActions>
+                    <Button variant='contained' color="error" onClick={() => handleClick(false)}>Fechar</Button>
+                    <Button variant='contained' color="success">Salvar</Button>
+                </DialogActions>
+            </Dialog>
+        </DialogDataProvider>
+
     )
 }
