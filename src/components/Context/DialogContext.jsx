@@ -10,10 +10,6 @@ const DialogDataProvider = ({ children }) => {
 
     const [rowsDialog, setRowsDialog] = useState([])
 
-    // useEffect(() => {
-    //     console.log(rowsDialog.map(el => el.typeId))
-    // }, [rowsDialog])
-
     return (
         <DialogDataContext.Provider value={{ rowsDialog, setRowsDialog }}>
             {children}
