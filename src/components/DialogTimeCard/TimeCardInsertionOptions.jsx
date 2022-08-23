@@ -41,7 +41,7 @@ export default function TimeCardInsertionOptions() {
         <form noValidate onSubmit={handleSubmit}>
             <Grid container spacing={2} sx={{ display: "flex", alignItems: "end" }}>
                 <Grid item xs={12} sm={12} md={4}>
-                    <label htmlFor='type'>Tipo:</label>
+                    <label htmlFor='type' className="label-font">Tipo:</label>
                     <Select
                         sx={{ width: "100%" }}
                         name="typeId"
@@ -56,10 +56,10 @@ export default function TimeCardInsertionOptions() {
                             return <MenuItem value={type.index} key={type.index}>{type.name}</MenuItem>
                         })}
                     </Select>
-                    {errors.typeId && touched.typeId && <p className="error">{errors.typeId}</p>}
+                    {errors.typeId && touched.typeId && <p className="error label-font">{errors.typeId}</p>}
                 </Grid>
                 <Grid item xs={12} sm={12} md={4}>
-                    <label htmlFor='time'>Hora:</label>
+                    <label htmlFor='time' className="label-font">Hora:</label>
                     <TextField
                         name="time"
                         variant="outlined"
@@ -68,7 +68,7 @@ export default function TimeCardInsertionOptions() {
                         placeholder="Informe a hora"
                         className={errors.time && touched.time ? "input-error" : ""}
                     />
-                    {errors.time && touched.time && <p className="error">{errors.time}</p>}
+                    {errors.time && touched.time && <p className="error label-font">{errors.time}</p>}
                 </Grid>
                 <Grid item xs={12} sm={12} md={4} >
                     <Button

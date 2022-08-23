@@ -17,3 +17,12 @@
 .input-error {
     border-color: "#fc8181"
 }
+
+.error {
+    padding-top: 2px;
+    color: #ff0000;
+}
+
+.label-font {
+    font-family: 'Open Sans', sans-serif;
+}
